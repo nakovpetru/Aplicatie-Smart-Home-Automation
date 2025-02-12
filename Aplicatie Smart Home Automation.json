@@ -1,0 +1,1147 @@
+[
+    {
+        "id": "7b8b9c7fd345adb3",
+        "type": "tab",
+        "label": "Temperatura",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "877de5e08e8dcde4",
+        "type": "tab",
+        "label": "Umiditate",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d106b3c569baafa8",
+        "type": "tab",
+        "label": "Presiune",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7b80061a888dfca2",
+        "type": "tab",
+        "label": "Notificari",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "de2743e6461a7fc3",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#00ca33",
+                "baseFont": "Arial Black,Arial Black,Gadget,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED DASHBOARD",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 20,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "598e05eb90186773",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "abda5e174bc6fe82",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "e91cb0a9337569ed",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e91cb0a9337569ed",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3e95368f0746b6f4",
+        "type": "ui_group",
+        "name": "Umiditate",
+        "tab": "e91cb0a9337569ed",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2d03f505dc92235e",
+        "type": "ui_group",
+        "name": "Presiune",
+        "tab": "e91cb0a9337569ed",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "11d41a91d0480e71",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "e91cb0a9337569ed",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2a11613a19758540",
+        "type": "ui_group",
+        "name": "Confort",
+        "tab": "e91cb0a9337569ed",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c87282f19e357b6",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "Database",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "https://influxdb.nakovsmarthome.eu",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "d199ca5bd5696f14",
+        "type": "ui_group",
+        "name": "Notificare",
+        "tab": "e91cb0a9337569ed",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b25818e2440aceff",
+        "type": "mqtt in",
+        "z": "7b8b9c7fd345adb3",
+        "name": "",
+        "topic": "esp/bme280/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "598e05eb90186773",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "4eaf54d2960b4f14",
+                "373599abd8c1f094",
+                "23ce0ce949aaabb4",
+                "8555ee23ae8389f2"
+            ]
+        ]
+    },
+    {
+        "id": "4eaf54d2960b4f14",
+        "type": "ui_gauge",
+        "z": "7b8b9c7fd345adb3",
+        "name": "Temperature gauge",
+        "group": "abda5e174bc6fe82",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 500,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "373599abd8c1f094",
+        "type": "debug",
+        "z": "7b8b9c7fd345adb3",
+        "name": "Temperature debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "23ce0ce949aaabb4",
+        "type": "function",
+        "z": "7b8b9c7fd345adb3",
+        "name": "atribuie temperatura si tags",
+        "func": "msg.payload = [{\n temperature: Number (msg.payload)\n},\n{\n sensor: \"BME280\",\n device: \"ESP32\",\n room: \"office\"\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 280,
+        "wires": [
+            [
+                "772cea0a60b13294"
+            ]
+        ]
+    },
+    {
+        "id": "772cea0a60b13294",
+        "type": "influxdb out",
+        "z": "7b8b9c7fd345adb3",
+        "influxdb": "5c87282f19e357b6",
+        "name": "Scrie in InfluxDB",
+        "measurement": "readings",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "Home",
+        "x": 780,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "042268f97134c2a1",
+        "type": "ui_switch",
+        "z": "7b8b9c7fd345adb3",
+        "name": "",
+        "label": "Clima",
+        "tooltip": "",
+        "group": "2a11613a19758540",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "d817dd936fcd4988"
+            ]
+        ]
+    },
+    {
+        "id": "d817dd936fcd4988",
+        "type": "function",
+        "z": "7b8b9c7fd345adb3",
+        "name": "function confort clima",
+        "func": "global.set(\"clima\", msg.payload);\nreturn msg;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set(\"clima\", false);",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "22f5b4e639f52bbe",
+        "type": "ui_switch",
+        "z": "7b8b9c7fd345adb3",
+        "name": "",
+        "label": "Clima",
+        "tooltip": "Controls Air conditioner",
+        "group": "11d41a91d0480e71",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 990,
+        "y": 360,
+        "wires": [
+            [
+                "153aaf040823b739"
+            ]
+        ]
+    },
+    {
+        "id": "153aaf040823b739",
+        "type": "mqtt out",
+        "z": "7b8b9c7fd345adb3",
+        "name": "Clima on/off",
+        "topic": "esp/digital/23",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "598e05eb90186773",
+        "x": 1150,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b5783d4542ff5ed8",
+        "type": "switch",
+        "z": "7b8b9c7fd345adb3",
+        "name": "compara temperatura",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "25",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "24",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 640,
+        "y": 360,
+        "wires": [
+            [
+                "b22af3833c61a303"
+            ],
+            [
+                "5132a86ce6f14ff3"
+            ]
+        ]
+    },
+    {
+        "id": "5132a86ce6f14ff3",
+        "type": "change",
+        "z": "7b8b9c7fd345adb3",
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "22f5b4e639f52bbe"
+            ]
+        ]
+    },
+    {
+        "id": "8555ee23ae8389f2",
+        "type": "switch",
+        "z": "7b8b9c7fd345adb3",
+        "name": "Confort activat",
+        "property": "clima",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "b5783d4542ff5ed8"
+            ]
+        ]
+    },
+    {
+        "id": "b22af3833c61a303",
+        "type": "change",
+        "z": "7b8b9c7fd345adb3",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 320,
+        "wires": [
+            [
+                "22f5b4e639f52bbe"
+            ]
+        ]
+    },
+    {
+        "id": "f897fc800205b838",
+        "type": "influxdb out",
+        "z": "877de5e08e8dcde4",
+        "influxdb": "5c87282f19e357b6",
+        "name": "Scrie in InfluxDB",
+        "measurement": "readings",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "Home",
+        "x": 760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "20e3f1094934b961",
+        "type": "function",
+        "z": "877de5e08e8dcde4",
+        "name": "atribuie umiditate si tags",
+        "func": "msg.payload = [{\n humidity: Number(msg.payload)\n},\n{\n sensor: \"BME280\",\n device: \"ESP32\",\n room: \"office\"\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "f897fc800205b838"
+            ]
+        ]
+    },
+    {
+        "id": "97615289e4804a04",
+        "type": "mqtt in",
+        "z": "877de5e08e8dcde4",
+        "name": "",
+        "topic": "esp/bme280/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "598e05eb90186773",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "c5722e48895013dd",
+                "6b15f538145303f3",
+                "20e3f1094934b961",
+                "66714dd898f9ae03"
+            ]
+        ]
+    },
+    {
+        "id": "c5722e48895013dd",
+        "type": "ui_gauge",
+        "z": "877de5e08e8dcde4",
+        "name": "Humidity gauge",
+        "group": "3e95368f0746b6f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6b15f538145303f3",
+        "type": "debug",
+        "z": "877de5e08e8dcde4",
+        "name": "Humidity debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "38146d41b9a04c3a",
+        "type": "ui_switch",
+        "z": "877de5e08e8dcde4",
+        "name": "",
+        "label": "Umiditate",
+        "tooltip": "",
+        "group": "2a11613a19758540",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 420,
+        "y": 480,
+        "wires": [
+            [
+                "c94c2eea72713846"
+            ]
+        ]
+    },
+    {
+        "id": "c94c2eea72713846",
+        "type": "function",
+        "z": "877de5e08e8dcde4",
+        "name": "function confort umiditate ",
+        "func": "global.set(\"humidity\", msg.payload);\nreturn msg;",
+        "outputs": 0,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set(\"humidity\", false);",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "66714dd898f9ae03",
+        "type": "switch",
+        "z": "877de5e08e8dcde4",
+        "name": "Confort activat",
+        "property": "humidity",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "c78e83a03df6a8b4"
+            ]
+        ]
+    },
+    {
+        "id": "c78e83a03df6a8b4",
+        "type": "switch",
+        "z": "877de5e08e8dcde4",
+        "name": "compara umiditate",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "50",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "40",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 400,
+        "wires": [
+            [
+                "37145a679043907a"
+            ],
+            [
+                "c19808432ea7ac26"
+            ]
+        ]
+    },
+    {
+        "id": "37145a679043907a",
+        "type": "change",
+        "z": "877de5e08e8dcde4",
+        "name": "true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 360,
+        "wires": [
+            [
+                "f77fdb8ed62eae1c"
+            ]
+        ]
+    },
+    {
+        "id": "c19808432ea7ac26",
+        "type": "change",
+        "z": "877de5e08e8dcde4",
+        "name": "false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 440,
+        "wires": [
+            [
+                "f77fdb8ed62eae1c"
+            ]
+        ]
+    },
+    {
+        "id": "f77fdb8ed62eae1c",
+        "type": "ui_switch",
+        "z": "877de5e08e8dcde4",
+        "name": "",
+        "label": "Umiditate",
+        "tooltip": "Controls Dehumidifier",
+        "group": "11d41a91d0480e71",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 960,
+        "y": 400,
+        "wires": [
+            [
+                "7d70ab6a4ec96969"
+            ]
+        ]
+    },
+    {
+        "id": "7d70ab6a4ec96969",
+        "type": "mqtt out",
+        "z": "877de5e08e8dcde4",
+        "name": "Umiditate on/off",
+        "topic": "esp/digital/4",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "598e05eb90186773",
+        "x": 1140,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fa1a8e5744e22337",
+        "type": "ui_gauge",
+        "z": "d106b3c569baafa8",
+        "name": "Pressure gauge",
+        "group": "2d03f505dc92235e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "hPa",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3df02ddbbf8c79db",
+        "type": "mqtt in",
+        "z": "d106b3c569baafa8",
+        "name": "",
+        "topic": "esp/bme280/pressure",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "598e05eb90186773",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "fa1a8e5744e22337",
+                "8d62538e694e31fe",
+                "eb581d3b1b8858b4"
+            ]
+        ]
+    },
+    {
+        "id": "8d62538e694e31fe",
+        "type": "debug",
+        "z": "d106b3c569baafa8",
+        "name": "Pressure debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "eb581d3b1b8858b4",
+        "type": "function",
+        "z": "d106b3c569baafa8",
+        "name": "atribuie presiune si tags",
+        "func": "msg.payload = [{\n pressure: Number(msg.payload)\n},\n{\n sensor: \"BME280\",\n device: \"ESP32\",\n room: \"office\"\n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "54be6acd26149a70"
+            ]
+        ]
+    },
+    {
+        "id": "54be6acd26149a70",
+        "type": "influxdb out",
+        "z": "d106b3c569baafa8",
+        "influxdb": "5c87282f19e357b6",
+        "name": "Scrie in InfluxDB",
+        "measurement": "readings",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "smarthome",
+        "bucket": "Home",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "2cfe2ce6f3b49dd5",
+        "type": "debug",
+        "z": "7b80061a888dfca2",
+        "name": "Email debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "fe0cf4cbc3e37aad",
+        "type": "switch",
+        "z": "7b80061a888dfca2",
+        "name": "notificare activat",
+        "property": "emailMotionNotifications",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "9fc0ada113d15f1f"
+            ]
+        ]
+    },
+    {
+        "id": "9fc0ada113d15f1f",
+        "type": "function",
+        "z": "7b80061a888dfca2",
+        "name": "scrie mesaj email",
+        "func": "msg.payload = \"S-a detectat miscare in birou https://nodered.nakovsmarthome.eu/ui\";\nmsg.topic =\"Alerta! Miscare detectata!\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [
+                "9e7ec7f335c46db5"
+            ]
+        ]
+    },
+    {
+        "id": "9e7ec7f335c46db5",
+        "type": "e-mail",
+        "z": "7b80061a888dfca2",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "petrusmarthome@gmail.com",
+        "dname": "trimite email",
+        "x": 890,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4288f47a275c1ff0",
+        "type": "mqtt in",
+        "z": "7b80061a888dfca2",
+        "name": "",
+        "topic": "esp/motion/notification",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "598e05eb90186773",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "fe0cf4cbc3e37aad",
+                "2cfe2ce6f3b49dd5"
+            ]
+        ]
+    },
+    {
+        "id": "d7946c9e22e7accd",
+        "type": "ui_switch",
+        "z": "7b80061a888dfca2",
+        "name": "",
+        "label": "Email",
+        "tooltip": "",
+        "group": "d199ca5bd5696f14",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "cd3396dde8b6d59e"
+            ]
+        ]
+    },
+    {
+        "id": "cd3396dde8b6d59e",
+        "type": "function",
+        "z": "7b80061a888dfca2",
+        "name": "function Notificare email",
+        "func": "global.set(\"emailMotionNotifications\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set(\"emailMotionNotifications\", false);",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    }
+]
